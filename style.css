@@ -25,17 +25,21 @@ body::before {
 
 /* HEADER */
 header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 30px;
+
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+  color: white;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 nav a:hover {
@@ -96,4 +100,289 @@ footer {
 
 .gallery img:hover {
     transform: scale(1.05);
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.event-card {
+  background: rgba(253, 253, 253, 0.6);
+  padding: 15px;
+  border-radius: 15px;
+
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.event-card img:hover {
+  transform: scale(1.05);
+}
+
+.banner {
+  height: 120px;
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  width: 60px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* menu caché */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #1b263b;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* liens du menu */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+/* afficher au hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.salle-page {
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+.salle-page h1 {
+  margin-bottom: 20px;
+}
+
+.salle-img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.salle-img:hover {
+  transform: scale(1.03);
+}
+
+.salle-page p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #555;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2f6ea5;
+  color: white;
+  border: none;
+}
+
+.contact-page {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.contact-page h1 {
+  margin-bottom: 30px;
+}
+
+/* formulaire */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: RGBA(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+/* champs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* textarea plus grand */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* bouton */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff007f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+button:hover {
+  background: #cc0066;
+}
+
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+}
+
+/* LOGO */
+.logo {
+  width: 60px;
+}
+
+/* NAV */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #1b263b;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: RGBA(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* INPUTS */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+textarea {
+  height: 120px;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff007f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
